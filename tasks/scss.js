@@ -14,13 +14,13 @@ import autoprefixer from 'gulp-autoprefixer'               // css autoprefixing
 import csso from 'gulp-csso';                              // css minify
 import rename from 'gulp-rename';                          // file renaming
 import size from 'gulp-size';                              // size measuring
-import shorthand from 'gulp-shorthand';                    // make shorthands for css props
 import groupqueries from 'gulp-group-css-media-queries';   // group @media
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
+import dartSass from 'sass';                               // sass compiler
+import gulpSass from 'gulp-sass';                          // gulp plugin for sass 
 import webpcss from 'gulp-webp-css';                       // webp for css
 
 const sass = gulpSass(dartSass);
+
 
 // ------------ params
 let plumberSCSSSettings = {
@@ -31,14 +31,13 @@ let plumberSCSSSettings = {
 };
 
 
-// ------------ CSS processing pipe
+// ------------ SCSS processing pipe
 const scss = () => {
     return gulp.src(path.scss.src, { sourcemaps: plugins.isDev })
         .pipe(plumber(plumberSCSSSettings))
         .pipe(sass())
         .pipe(webpcss())
         .pipe(autoprefixer())
-        .pipe(shorthand())
         .pipe(groupqueries())
         .pipe(size(plugins.messages.sizeBefore))
         .pipe(gulp.dest(path.scss.dest, { sourcemaps: plugins.isDev }))

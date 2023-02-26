@@ -1,0 +1,46 @@
+@mixin setFont(
+    $fontName,
+    $fontWeight,
+    $fontSize,
+    $lineHeight,
+    $letterSpacing: 0
+) {
+    @if $fontName == "Roboto" {
+        font-family: $fontName, sans-serif;
+    } @else {
+        font-family: $fontName, serif;
+    }
+
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+// Flex
+
+@mixin setFlexWithGap($gap: initial) {
+    display: flex;
+    justify-content: flex-start;
+    gap: $gap;
+}
+
+@mixin setFlexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin setFlexCenteredRow {
+    align-items: center;
+}
+
+@mixin setFlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin setFlexButton($padV, $padH) {
+    display: inline-flex;
+    padding: $padV $padH;
+}

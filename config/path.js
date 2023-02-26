@@ -18,13 +18,6 @@ export default {
         dest: pathDest
     },
 
-    css: {
-        src: pathSrc + '/css/*.css',
-        watch: pathSrc + '/css/**/*.css',
-        dest: pathDest + '/css',
-        targetFile: 'main.css'
-    },
-
     scss: {
         src: pathSrc + '/sass/*.{sass,scss}',
         watch: pathSrc + '/sass/**/*.{sass,scss}',
@@ -43,9 +36,9 @@ export default {
         dest: pathDest + '/img',
     },
 
-    font: {
-        src: pathSrc + '/font/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
-        watch: pathSrc + '/font/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
-        dest: pathDest + '/font',
+    svg: {
+        src: pathSrc + '/icons/*.svg',
+        watch: pathSrc + '/icons/**/*.svg',
+        dest: pathDest + '/icons'
     }
-} 
+}

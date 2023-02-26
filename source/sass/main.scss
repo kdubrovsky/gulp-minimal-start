@@ -1,30 +1,7 @@
-$base-font-size: 16px;
+@import "_variables";
+@import "_mixins";
+@import "_reset";
+@import "_global";
 
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 700px;
-}
-
-@mixin ph {
-  @media (max-width: 700px) {
-    @content;
-  }
-}
-
-body {
-  font-size: $base-font-size;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  line-height: 1.5;
-  background: url("../img/e.jpg") no-repeat center/cover;
-
-  @include ph {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
-@import "chunks/title.scss";
-@import "chunks/news.scss";
+@import "blocks/_all";
+@import "sections/_all";

@@ -1,0 +1,28 @@
+body {
+    background-color: $color_white;
+}
+
+.content-zone {
+    width: $size_content;
+    margin: 0 auto;
+    padding: 0 40px;
+    min-width: $size_content;
+}
+
+// DEV ODEBUGGING OUTLINES
+
+// section {
+//     outline: 1px solid red;
+// }
+
+// header {
+//     outline: 1px solid green;
+// }
+
+// footer {
+//     outline: 1px solid orange;
+// }
+
+// .content-zone {
+//      outline: 1px solid blue;
+// }

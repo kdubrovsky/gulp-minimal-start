@@ -25,7 +25,3 @@ Gulp tasks
 ## `/config`
 
 Pathes and settings for Gulp
-
-## `/data`
-
-JSON data for HTML templates

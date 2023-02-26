@@ -1,15 +1,8 @@
-extends layout/app
-
-block page
-
-    include chunks/header
-
-    h1.title Главная страница
-
-    img(src="img/pattern-bloom-wallpaper.png", alt="imagealt")
-
-    ul.news 
-        each item in news
-            li= item.name
-
-    include chunks/footer 
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document1
+    body 
